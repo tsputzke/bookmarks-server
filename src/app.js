@@ -30,6 +30,10 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
+app.get('/bookmarks', (req, res, next) => {
+  res.send('All bookmarks')
+})
+
 app.get('/', (req, res) => {
   res.send('Hello, world!')
 })
